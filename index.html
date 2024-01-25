@@ -19,13 +19,13 @@
       rel="stylesheet"
     />
 
-    <!-- ---- font awesome ---- -->
+    <!-- ---- Font awesome ---- -->
     <script
       src="https://kit.fontawesome.com/8d3c13524b.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- ---- tailwind custom colors ---- -->
+    <!-- ---- Tailwind custom colors ---- -->
     <script>
       tailwind.config = {
         theme: {
@@ -39,8 +39,21 @@
       };
     </script>
 
-    <!-- ---- basic stile ---- -->
+    <!-- ---- Basic styles ---- -->
     <style>
+      * {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "EB Garamond", serif;
+        }
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+      }
       .font-eb_garamond {
         font-family: "EB Garamond", serif;
       }
@@ -50,41 +63,78 @@
       .my-container {
         max-width: 1170px;
         margin: 0 auto;
+      }                                              
+      .my-button {
+        border-radius: 8px;
+        background: #b68c5a;
+        padding: 20px 30px;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 600;
       }
     </style>
   </head>
   <body>
     <!-- ---- Header area ---- -->
-    <header class="my-container">
-      <!-- ---- nav  ---- -->
-      <nav class="flex justify-between items-center">
-        <div class="flex items-center gap-5">
-          <img class="h-[45px]" src="images/business.png" alt="" />
-          <span class="font-eb_garamond text-4xl font-extrabold text-[#414040]"
-            >Justice</span
-          >
+    <header class="my-container px-5 lg:px-0">
+      <!-- Nav -->
+      <nav class="flex justify-between items-center py-12">
+        <!-- Logo -->
+        <div class="flex items-center lg:gap-5 gap-3">
+          <img class="lg:h-[45px] h-[35px]" src="images/business.png" alt="" />
+          <h1 class="lg:text-4xl text-2xl font-extrabold text-[#414040]">Justice</h1>
         </div>
-        <!-- ---- Menu ---- -->
+        <!-- Menu -->
         <div>
-          <menu>
+          <menu class="hidden lg:block">
             <ul
-              class="flex mt-3 p-2 text-base shadow bg-base-100 rounded-box"
+              class="flex justify-between text-[#707070] rounded-box gap-8"
             >
-              <li><a>Home</a></li>
-              <li><a>Services</a></li>
-              <li><a>Cases</a></li>
-              <li><a>Blog</a></li>
-              <li><a>Contact Us</a></li>
+              <li>
+                <a>Home</a
+                ><i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+              </li>
+              <li>
+                <a>Services</a
+                ><i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+              </li>
+              <li>
+                <a>Cases</a
+                ><i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+              </li>
+              <li>
+                <a>Blog</a
+                ><i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+              </li>
+              <li>
+                <a>Contact Us</a
+                ><i class="fa-solid fa-chevron-right ml-3 text-sm"></i>
+              </li>
             </ul>
           </menu>
         </div>
-        <!-- ---- Button ---- -->
+        <!-- Button -->
         <div>
-          <button class="btn btn-primary">Free Consultation</button>
+          <button class="my-button">Free Consultation</button>
         </div>
       </nav>
-      <!-- ---- Banner  ---- -->
-      <div></div>
+      <!-- Banner -->
+      <div>
+        <div class=" rounded-xl h-[550px] w-full" style="background-image: url(images/banner.png);">
+          <div class="text-white">
+            <div class="flex flex-col items-center justify-center h-[550px] lg:px-52 md:px-24 px-12 text-center gap-6">
+              <h1 class="lg:text-5xl text-3xl font-bold leading-tight">We Provide Effective <br>Legal Solutions</h1>
+              <p class="text-[#E7E7E7] lg:text-base text-xs">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+              <!-- Search -->
+              <div class="flex gap-6">
+                <input class="p-5 lg:w-96 rounded-lg" type="email" placeholder="Search your services">
+                <button class="my-button">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- ---- main area ---- -->
     <main class="my-container"></main>
